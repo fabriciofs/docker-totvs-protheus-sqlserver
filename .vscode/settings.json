@@ -1,0 +1,5 @@
+{
+  "totvsLanguageServer.welcomePage": false,
+  "totvsLanguageServer.workspaceServerConfig": true,
+  "totvsLanguageServer.askCompileResult": true
+}

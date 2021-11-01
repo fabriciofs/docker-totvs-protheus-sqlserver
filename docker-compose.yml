@@ -1,0 +1,93 @@
+version: "3.9"
+
+services:
+  dbserver:
+    build:
+      context: .
+      dockerfile: docker/dockerfiles/dockerfile.mssql
+    image: mssql_server:2017-latest
+    labels:
+      author: "Fabricio Ferreira - fabricio@fabriciofs.eti.br"
+    container_name: dbserver
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_PID: Developer
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      SA_PASSWORD: ${DB_PASSWORD}
+      DISPLAY: host.docker.internal:0
+      TOPALIAS: ${TOPALIAS}
+      IP_APPSERVER: ${IP_APPSERVER}
+    restart: always
+    ports:
+      - 1433:1433
+      - 7890:7890
+    networks:
+      totvs:
+        ipv4_address: ${IP_DATABASE}
+    volumes:
+      - ./docker/totvs/sql_data/data:/var/opt/mssql/data
+      - ./docker/totvs/sql_data/log:/var/opt/mssql/log
+      - ./docker/totvs/sql_data/secrets:/var/opt/mssql/secrets
+      - ./docker/totvs/dbaccess:/totvs/dbaccess
+
+  licserver:
+    build:
+      context: .
+      dockerfile: docker/dockerfiles/dockerfile.licserver
+    container_name: licserver
+    labels:
+      author: "Fabricio Ferreira - fabricio@fabriciofs.eti.br"
+    privileged: true
+    environment:
+      DISPLAY: host.docker.internal:0
+      LD_LIBRARY_PATH: /totvs/licenserver/bin/appserver
+    restart: always
+    ports:
+      - 5555:5555
+    networks:
+      totvs:
+        ipv4_address: ${IP_LICENSERVER}
+    volumes:
+      - ./docker/totvs/licenserver:/totvs/licenserver
+
+  appserver:
+    build:
+      context: .
+      dockerfile: docker/dockerfiles/dockerfile.appserver
+    container_name: appserver
+    labels:
+      author: "Fabricio Ferreira - fabricio@fabriciofs.eti.br"
+    depends_on:
+      - dbserver
+      - licserver
+    privileged: true
+    environment:
+      DISPLAY: host.docker.internal:0
+      LD_LIBRARY_PATH: /totvs/protheus/bin/appserver
+      TOPDATABASE: ${TOPDATABASE}
+      TOPALIAS: ${TOPALIAS}
+      IP_DATABASE: ${IP_DATABASE}
+      IP_APPSERVER: ${IP_APPSERVER}
+      IP_LICENSERVER: ${IP_LICENSERVER}
+      AMBIENTE: ${AMBIENTE}
+    restart: always
+    ports:
+      - 80:80
+      - 2345:2345
+      - 4321:4321
+      - 8079:8079
+    networks:
+      totvs:
+        ipv4_address: ${IP_APPSERVER}
+    volumes:
+      - ./docker/totvs:/totvs
+
+networks:
+  totvs:
+    name: totvs
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}
+          gateway: ${GATEWAY}

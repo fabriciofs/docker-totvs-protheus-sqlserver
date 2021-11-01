@@ -1,0 +1,5 @@
+docker/base-files
+docker/totvs
+/img
+console_error.log
+.env

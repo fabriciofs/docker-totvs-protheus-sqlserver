@@ -1,0 +1,1 @@
+cd /totvs/licenserver/bin/appserver && chmod 777 appsrvlinux && ./appsrvlinux

@@ -1,0 +1,54 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "totvs_language_debug",
+			"request": "launch",
+			"name": "TOTVS Language Debug",
+			"program": "${command:AskForProgramName}",
+			"cwb": "${workspaceFolder}",
+			"smartclientBin": "/mnt/c/Users/fabri/Dropbox/SmartClients/smartclient_33/smartclient.exe",
+			"isMultiSession": true,
+			"enableTableSync": true
+		}
+	],
+	"lastPrograms": [
+		{
+			"label": "sigamdi",
+			"description": "<nil>"
+		},
+		{
+			"label": "U_populaBase",
+			"description": "<nil>"
+		},
+		{
+			"label": "U_KaizenRest",
+			"description": "<nil>"
+		},
+		{
+			"label": "U_KRest",
+			"description": "<nil>"
+		},
+		{
+			"label": "kaizen.u_KRest",
+			"description": "<nil>"
+		},
+		{
+			"label": "kaizen.KRest",
+			"description": "<nil>"
+		},
+		{
+			"label": "kaizen.rest.u_KRest",
+			"description": "<nil>"
+		},
+		{
+			"label": "u_testeReflection",
+			"description": "<nil>"
+		},
+		{
+			"label": "u_testeKaizen",
+			"description": "<nil>"
+		}
+	],
+	"lastProgramExecuted": "u_testeKaizen"
+}

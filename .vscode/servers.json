@@ -1,0 +1,38 @@
+{
+	"version": "0.2.1",
+	"includes": [
+		"/home/fabriciofs/projetos/totvs/includes33"
+	],
+	"permissions": {
+		"authorizationtoken": ""
+	},
+	"connectedServer": {},
+	"configurations": [
+		{
+			"id": "9n35mb7jeemkv3p0khxquonkec29m",
+			"type": "totvs_server_protheus",
+			"name": "Docker",
+			"port": 2345,
+			"address": "localhost",
+			"buildVersion": "7.00.210324P",
+			"secure": true,
+			"includes": [],
+			"environments": [
+				"docker"
+			],
+			"username": "admin",
+			"environment": "docker",
+			"token": "djM6OW4zNW1iN2plZW1rdjNwMGtoeHF1b25rZWMyOW06MTpsb2NhbGhvc3Q6MjM0NToxOjcuMDAuMjEwMzI0UDoz:djE6ZG9ja2VyOmFkbWluOmtydm5FTHBIODdTdFFIUEtDY3JISkJhV1MyWWtDelplM2FVa3BqQkpaTm89|djI6MTYzNTQ2MDQyNjowOjE6MQ==.Z/tawkbWOOzv3qSBcCNHgYXuZIPPtpdqb4D+m7k+Rz4FJ4eya7u+OsWSj/8D62rxFp2n7kx8LoK4KWaa0BAK89Y95mIe2H6DhzQxuXfGd3GlrxAth5GuM9rkc0pVP3JxaunK/uwqcg7lD4qKjb2zw6O3l7xJQ+ui17AerY1y/z54oRwby8luD17Sg+/YWo7BTCp6HgTCteYwmfrzZ1LiDT5WEg4LbrYLjS7JndPgqhwV3AR2Ywf5zknfIWJkkvMoFRjs7V4lpSxF605XnBeHYPqAGMwTJ8J5BHThB5GCU+cTv9GC6TFG2TrQQOOekXNDH46XcqSgu8CEyp2R3V8v8g=="
+		}
+	],
+	"savedTokens": [
+		[
+			"9n35mb7jeemkv3p0khxquonkec29m:docker",
+			{
+				"id": "9n35mb7jeemkv3p0khxquonkec29m",
+				"token": "djM6OW4zNW1iN2plZW1rdjNwMGtoeHF1b25rZWMyOW06MTpsb2NhbGhvc3Q6MjM0NToxOjcuMDAuMjEwMzI0UDoz:djE6ZG9ja2VyOmFkbWluOmtydm5FTHBIODdTdFFIUEtDY3JISkJhV1MyWWtDelplM2FVa3BqQkpaTm89|djI6MTYzNTQ2MDQyNjowOjE6MQ==.Z/tawkbWOOzv3qSBcCNHgYXuZIPPtpdqb4D+m7k+Rz4FJ4eya7u+OsWSj/8D62rxFp2n7kx8LoK4KWaa0BAK89Y95mIe2H6DhzQxuXfGd3GlrxAth5GuM9rkc0pVP3JxaunK/uwqcg7lD4qKjb2zw6O3l7xJQ+ui17AerY1y/z54oRwby8luD17Sg+/YWo7BTCp6HgTCteYwmfrzZ1LiDT5WEg4LbrYLjS7JndPgqhwV3AR2Ywf5zknfIWJkkvMoFRjs7V4lpSxF605XnBeHYPqAGMwTJ8J5BHThB5GCU+cTv9GC6TFG2TrQQOOekXNDH46XcqSgu8CEyp2R3V8v8g=="
+			}
+		]
+	],
+	"lastConnectedServer": "9n35mb7jeemkv3p0khxquonkec29m"
+}
