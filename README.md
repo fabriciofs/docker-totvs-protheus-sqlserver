@@ -7,9 +7,9 @@
 ├── docker
 │   ├── build
 │   │   ├── appserver
-│   │   │   └── entrypoint-mssql.sh
+│   │   │   └── entrypoint-appserver.sh
 │   │   ├── licserver
-│   │   │   └── entrypoint-mssql.sh
+│   │   │   └── entrypoint-licserver.sh
 │   │   └── mssql
 │   │       ├── db_mssql.sh
 │   │       ├── db_mssql.sql
@@ -35,3 +35,5 @@
 ├── docker-compose.yml
 └── README.md
 ```
+
+[Link](https://www.dropbox.com/s/axfc7s9ddz3zoxl/totvs.tar.gz?dl=0) para downoad da pasta Totvs contento a versão do protheus 12.1.33, dbaccess e lincense server
