@@ -36,4 +36,4 @@
 └── README.md
 ```
 
-[Link](https://www.dropbox.com/s/axfc7s9ddz3zoxl/totvs.tar.gz?dl=0) para downoad da pasta Totvs contento a versão do protheus 12.1.33, dbaccess e lincense server
+[Link](https://1drv.ms/u/s!Amsk_MgBIERq3qdKX-AFSdhtJtK_BA?e=cCzm9X) para downoad da pasta Totvs contento a versão do protheus 12.1.33, dbaccess e lincense server
