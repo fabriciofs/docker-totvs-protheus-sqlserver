@@ -3,6 +3,6 @@ FROM oraclelinux:8.5
 
 COPY docker/build/appserver/entrypoint-appserver.sh /opt
 
-EXPOSE 80 2345 4321 8020 8097 8020
+EXPOSE 80 8080 2345 4321 8020 8097 8020
 
 CMD /opt/entrypoint-appserver.sh

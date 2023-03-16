@@ -3,6 +3,6 @@ FROM oraclelinux:8.5
 
 COPY docker/build/licserver/entrypoint-licserver.sh /opt
 
-EXPOSE 5555
+EXPOSE 5555 2234 8020
 
 CMD /opt/entrypoint-licserver.sh

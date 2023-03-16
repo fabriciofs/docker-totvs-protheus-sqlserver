@@ -44,7 +44,9 @@ services:
       LD_LIBRARY_PATH: /totvs/licenserver/bin/appserver
     restart: always
     ports:
+      - 2234:2234
       - 5555:5555
+      - 8020:8020
     networks:
       totvs:
         ipv4_address: ${IP_LICENSERVER}
@@ -74,6 +76,7 @@ services:
     restart: always
     ports:
       - 80:80
+      - 8080:8080
       - 2345:2345
       - 4321:4321
       - 8079:8079
